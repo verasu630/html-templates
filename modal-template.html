@@ -1,0 +1,195 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Modal Template 1</title>
+<style>
+	body {
+		background-color: #EDF1F2;
+		text-transform: lowercase;
+	}
+
+	#syl_container {
+	  width: 500px;
+	  height: 350px;
+	  margin: 0px auto;
+	  font-family: arial;
+	  font-size: 11px;
+	  line-height: 13px;
+	  overflow: hidden;
+	}
+
+	#syl_container .toggleO {
+	  width: 490px;
+	  height: 340px;
+	  background-image: url('images/modal-template.jpg');
+	  background-size: cover;
+	  cursor: crosshair;
+	  border: 5px solid black;
+	}
+
+	#syl_container .titlewords {
+	  width: 225px;
+	  margin: 0 auto;
+	  padding: 4px;
+	  background-color: #000;
+	  color: #fff;
+	  text-align: center;
+	  position: relative;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  font: 30px Yanone Kaffeesatz;
+	  text-transform: uppercase;
+	}
+
+	#syl_container .toggleC {
+	  width: 500px;
+	  margin-top: 20px;
+	  font-family: Yanone Kaffeesatz;
+	  font-size: 11px;
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  cursor: crosshair;
+	}
+
+	#syl_container .toggledInfo {
+	  display: none;
+	}
+
+	#syl_container .inside {
+	  padding: 50px;
+	  width: 400px;
+	  height: 250px;
+	  background-color: #fff;
+	}
+
+	#syl_container a {
+	  text-decoration: none;
+	  color: #fff;
+	}
+
+	.syl_modal {
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(0, 0, 0, 0.7);
+	  z-index: 99999;
+	  opacity: 0;
+	  -webkit-transition: opacity .5s ease-in;
+	  -moz-transition: opacity .5s ease-in;
+	  transition: opacity .5s ease-in;
+	  pointer-events: none;
+	}
+
+	.syl_modal:target {
+	  opacity: 1;
+	  pointer-events: auto;
+	}
+
+	.syl_modal > .syl_modO {
+	  width: 400px;
+	  height: 250px;
+	  background: #fefefe;
+	  color: #777;
+	  position: relative;
+	  margin: 13% auto;
+	  padding: 50px;
+	  text-align: justify;
+	  z-index: 3;
+	}
+
+	.syl_modC {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 2;
+	  cursor: crosshair;
+	}
+
+	.inside a {
+	  margin-top: 10px;
+	  display: block;
+	  height: 15px;
+	  padding: 15px;
+	  background-color: #000;
+	  color: #FFF;
+	  text-decoration: none;
+	  text-align: center;
+	  font-size: 15px;
+	  cursor: crosshair;
+	}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  $(".syl_wrapper").click(function() {
+    $(".syl_wrapper").slideUp(500);
+    $(".toggledInfo").slideDown(500);
+  });
+
+  $(".toggleC").click(function() {
+    $(".toggledInfo").slideUp(500);
+    $(".syl_wrapper").slideDown(500);
+  });
+
+});
+</script>
+</head>
+
+<body>
+<div id='syl_container'>
+  <div class='syl_wrapper'>
+		<div class='toggleO'>
+		  <div class='titlewords'>
+			such young love
+		  </div>
+		</div>
+  </div>
+	<div class='toggledInfo'>
+		<div class='inside'>
+		  <a href=#syl_mod1>link 1</a>
+		  <a href=#syl_mod2>link 2</a>
+		  <a href=#syl_mod3>link 3</a>
+		  <a href=#syl_mod4>link 4</a>
+
+		  <div class='toggleC'>
+			close
+		  </div>
+		</div>
+  </div>
+</div>
+
+<div id="syl_mod1" class="syl_modal">
+  <div class="syl_modO">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <a href="#syl_modC" class="syl_modC"></a>
+</div>
+
+<div id="syl_mod2" class="syl_modal">
+	<div class="syl_modO">
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+	</div>
+	<a href="#syl_modC" class="syl_modC"></a>
+</div>
+
+<div id="syl_mod3" class="syl_modal">
+	<div class="syl_modO">
+	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+	</div>
+	<a href="#syl_modC" class="syl_modC"></a>
+</div>
+
+<div id="syl_mod4" class="syl_modal">
+  <div class="syl_modO">
+	Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+  </div>
+  <a href="#syl_modC" class="syl_modC"></a>
+</div>
+</body>
+</html>
