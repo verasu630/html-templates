@@ -1,0 +1,163 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+	<title>Text Template 2</title>
+	<style>
+	body {
+		background-color: #FAE3FC;
+	}
+
+	#nonstop {
+	  font: normal normal normal 11px/150% 'Oxygen', sans-serif;
+	  color: #222;
+	  text-transform: lowercase;
+	  width: 450px;
+	  height: 450px;
+	  background: linear-gradient(320deg,  #F1C2F2, #A772F2 70%, #6A36D9);
+	  margin: 0 auto;
+	  padding: 25px;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+	  overflow-y: hidden;
+	  overflow-x: hidden;
+	}
+
+	#nonstop b {
+	  color: #6A36D9;
+	  font-weight: 700;
+	}
+
+	#nonstop ::-webkit-scrollbar {
+	  width: 5px;
+	}
+
+	#nonstop ::-webkit-scrollbar-track {
+	  background: #f1f1f1;
+	}
+
+	#nonstop ::-webkit-scrollbar-thumb {
+	  background: #968FBF;
+	}
+
+	#nonstop .avi-container {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	#nonstop .avi-container .avi {
+	  display: block;
+	  width: 430px;
+	  height: 430px;
+	  object-fit: cover;
+	  border: 10px solid #BF9BF2;
+	  margin-bottom: 5px;
+	  transition: width 0.7s, height 0.7s;
+	}
+
+
+	#nonstop:hover .avi,
+	#nonstop:focus .avi{
+	  width: 180px;
+	  height: 300px;
+	  transition: width 0.7s 0.3s, height 0.7s 0.3s;
+	}
+
+	#nonstop .avi-container .name {
+	  position: absolute;
+	  top: 50%;
+	  left: 0;
+	  right: 0;
+	  transform: translate(0, -50%);
+	  text-align: center;
+	  
+	}
+
+	#nonstop .avi-container .name h1 {
+	  font: 50px/100% 'Carter One', display;
+	  background:-webkit-linear-gradient(-86deg, #A09BF8 5%, #F7C8F7 53%, #9F89B9 91%);
+	  -webkit-background-clip: text;
+	  -webkit-text-stroke: 6px transparent;
+	  color: #FFF;
+	  opacity: 1;
+	  transition: opacity 0.3s 0.6s;
+	}
+
+	#nonstop:hover .avi-container .name h1,
+	#nonstop:focus .avi-container .name h1{
+	  opacity: 0;
+	  transition: opacity 0.3s;
+	}
+
+
+	#nonstop .label {
+	  width: 200px;
+	  height: 25;
+	  background-color: #FFF;
+	  margin: 5px 0px;
+	  text-align: center;
+	  line-height: 25px;
+	  font-size: 13px;
+	  letter-spacing: 3px;
+	  opacity: 0.8;
+	  overflow-x: auto; /*just in case you have a long name lol*/
+	  transform: translateY(20px);
+	  transition: 0.7s transform;
+	}
+
+
+	#nonstop:hover .label,
+	#nonstop:focus .label {
+	  transform: translateY(0);
+	  transition: 0.7s transform 0.3s;
+	}
+
+	#nonstop .application {
+	  display: hidden;
+	  background-color: #FFF;
+	  width: 200px;
+	  height: 440px;
+	  overflow-y: auto;
+	  overflow-x: hidden;
+	  padding: 5px 15px;
+	  opacity: 0.8;
+	  transform: translateX(100px);
+	  transition: 0.7s transform;
+	}
+
+
+	#nonstop:hover .application,
+	#nonstop:focus .application {
+	  transform: translateX(0);
+	  transition: 0.7s transform 0.3s;
+	}
+
+	#nonstop .credit {
+	  width: 500px;
+	  text-align: right;
+	  margin: 0 auto;
+	  font-size: 9px;
+	}
+	</style>
+</head>
+
+<body>
+  <div id="nonstop">
+    <div>
+      <div class="avi-container">
+        <img class="avi" src="https://img.nickpic.host/jlC6b5.png">
+        <div class="name"><h1>if we were stranded, what would you do?</h1></div>
+      </div>
+      <div class="label">location</div>
+      <div class="label">date</div>
+      <div class="label">word count</div>
+      <div class="label">@[tag]</div>
+    </div>
+    <div class="application">
+      <p>Lorem ipsum dolor sit amet, <b>"bold content looks like this right here"</b> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, <b>"bold content looks like this right here"</b> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, <b>"bold content looks like this right here"</b> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</body>
+</html>
